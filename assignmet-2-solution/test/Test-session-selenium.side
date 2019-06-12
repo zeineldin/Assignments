@@ -1,0 +1,39 @@
+{
+  "id": "2b60047f-5469-4bde-8b23-6be0906f4c05",
+  "version": "2.0",
+  "name": "Test-session",
+  "url": "http://java-app:8080/devopsarea-1.0/",
+  "tests": [{
+    "id": "deccaaac-ce20-4905-8193-180754106bc0",
+    "name": "Untitled",
+    "commands": [{
+      "id": "702046de-7404-4859-bb14-77e586dc958b",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": "/"
+    }, {
+      "id": "b8271348-685b-4728-b8b8-85377f4a27bd",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"],
+        ["xpath=//body[contains(.,'DevOpsArea Java Sample Projects 24.05.2019')]", "xpath:innerText"]
+      ],
+      "value": "DevOpsArea Java Sample Projects 11"
+    }]
+  }],
+  "suites": [{
+    "id": "05151173-59bc-4e44-bc44-3b25b738acfd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["deccaaac-ce20-4905-8193-180754106bc0"]
+  }],
+  "urls": ["http://java-app:8080/devopsarea-1.0/"],
+  "plugins": []
+}

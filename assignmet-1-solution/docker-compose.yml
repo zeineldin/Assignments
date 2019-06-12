@@ -1,0 +1,22 @@
+version: "3"
+services:
+  app1:     
+    image: mzain/java-app-1 
+    ports:
+      - "4444:8080"  
+    container_name: app1
+
+  app2:
+    build: ./Java-testapp2
+    ports:
+      - "5555:8080"
+    container_name: app2
+ 
+  reverse-proxy:     
+    image: mzain/reverse-proxy
+    ports:
+      - "3333:80"  
+    container_name: reverse-proxy
+    links: 
+      - app1
+      - app2
